@@ -46,13 +46,6 @@ function pathToInsertAssignments(path) {
 }
 
 module.exports = function({ types }) {
-  // No-op in production.
-  if (process.env.NODE_ENV === 'production') {
-    return {
-      visitor: {}
-    };
-  }
-
   return {
     visitor: {
       Program: {
